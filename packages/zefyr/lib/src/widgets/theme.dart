@@ -402,6 +402,7 @@ class AttributeTheme {
       code: BlockTheme(
         padding: EdgeInsets.symmetric(vertical: 8.0),
         textStyle: TextStyle(
+          fontFamily: monospaceFontFamily,
           fontSize: 14.0,
           color: defaultLineTheme.textStyle.color.withOpacity(0.8),
           height: 1.25,
