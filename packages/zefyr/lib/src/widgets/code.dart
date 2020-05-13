@@ -61,8 +61,9 @@ class ZefyrCode extends StatelessWidget {
                   Icons.content_copy,
                   color: contrastColor,
                 ),
+                iconSize: 13,
                 onPressed: () {
-                  onCopy(text);
+                  if (onCopy != null) onCopy(text);
                 },
               ),
             ),

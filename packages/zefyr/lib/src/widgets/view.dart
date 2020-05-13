@@ -1,8 +1,8 @@
 // Copyright (c) 2018, the Zefyr project authors.  Please see the AUTHORS file
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
-import 'package:clipboard_manager/clipboard_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 import 'package:notus/notus.dart';
 
@@ -105,7 +105,8 @@ class ZefyrViewState extends State<ZefyrView> {
       return ZefyrCode(
           node: block,
           onCopy: (str) async {
-            await ClipboardManager.copyToClipBoard(str);
+//            await ClipboardManager.copyToClipBoard(str);
+            await Clipboard.setData(ClipboardData(text: str));
           });
     } else if (blockStyle == NotusAttribute.block.bulletList) {
       return ZefyrList(node: block);
