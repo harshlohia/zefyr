@@ -22,10 +22,9 @@ class ZefyrParagraph extends StatelessWidget {
     if (blockStyle != null) {
       style = style.merge(blockStyle);
     }
-    print(blockStyle.toString());
     return ZefyrLine(
       node: node,
-      style: style.copyWith(fontFamily: 'IRANSans'),
+      style: style,
       padding: theme.defaultLineTheme.padding,
     );
   }
