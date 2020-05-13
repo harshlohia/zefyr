@@ -8,8 +8,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:notus/notus.dart';
-import 'package:zefyr/util.dart';
 
+import '../../util.dart';
 import 'controller.dart';
 import 'editable_box.dart';
 import 'scope.dart';

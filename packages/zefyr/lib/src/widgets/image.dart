@@ -9,8 +9,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
 import 'package:notus/notus.dart';
-import 'package:zefyr/zefyr.dart';
 
+import '../../zefyr.dart';
 import 'editable_box.dart';
 
 /// Provides interface for embedding images into Zefyr editor.

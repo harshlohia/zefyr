@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 /// Applies a Zefyr editor theme to descendant widgets.
@@ -341,7 +342,11 @@ class AttributeTheme {
         monospaceFontFamily = 'Roboto Mono';
         break;
       default:
-        throw UnimplementedError("Platform ${theme.platform} not implemented.");
+        if (kIsWeb)
+          monospaceFontFamily = 'Roboto Mono';
+        else
+          throw UnimplementedError(
+              "Platform ${theme.platform} not implemented.");
     }
 
     return AttributeTheme(

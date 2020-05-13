@@ -1,8 +1,8 @@
-name: zefyr
-description: Clean, minimalistic and collaboration-ready rich text editor for Flutter.
-version: 0.10.0
-author: Anatoly Pulyaevskiy <anatoly.pulyaevskiy@gmail.com>
-homepage: https://github.com/memspace/zefyr
+name: zefyr_nitro
+description: It's a fork from https://github.com/memspace/zefyr
+version: 0.10.1-dev.0
+homepage: https://github.com/mhbdev/zefyr
+publish_to: https://pub.dev/publishers/packs.apexteam.net
 
 environment:
   sdk: '>=2.2.2 <3.0.0'

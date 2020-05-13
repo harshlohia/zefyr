@@ -1,3 +1,7 @@
+## 0.10.1-dev.0
+
+The Code widget direction in zefyr editor is now ltr.
+
 ## 0.10.0
 
 This release contains breaking changes.

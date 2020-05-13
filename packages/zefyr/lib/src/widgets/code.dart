@@ -30,15 +30,18 @@ class ZefyrCode extends StatelessWidget {
         : Colors.grey.shade800;
     return Padding(
       padding: zefyrTheme.attributeTheme.code.padding,
-      child: Container(
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(3.0),
-        ),
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: items,
+      child: Directionality(
+        textDirection: TextDirection.ltr,
+        child: Container(
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(3.0),
+          ),
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: items,
+          ),
         ),
       ),
     );

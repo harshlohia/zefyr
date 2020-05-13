@@ -3,7 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:zefyr/util.dart';
+
+import '../../util.dart';
 
 typedef RemoteValueChanged = Function(
     int start, String deleted, String inserted, TextSelection selection);
@@ -180,4 +181,7 @@ class InputConnectionController implements TextInputClient {
       _sentRemoteValues.clear();
     }
   }
+
+  @override
+  TextEditingValue get currentTextEditingValue => TextEditingValue.empty;
 }
