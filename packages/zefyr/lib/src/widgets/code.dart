@@ -54,14 +54,14 @@ class ZefyrCode extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 10,
-              right: 10,
+              top: 8,
+              right: 8,
               child: IconButton(
                 icon: Icon(
                   Icons.content_copy,
                   color: contrastColor,
                 ),
-                iconSize: 13,
+                iconSize: 22,
                 onPressed: () {
                   if (onCopy != null) onCopy(text);
                 },
