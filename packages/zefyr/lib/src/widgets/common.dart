@@ -141,12 +141,6 @@ class _ZefyrLineState extends State<ZefyrLine> {
             attrs.contains(NotusAttribute.link)) {
           scope.attrDelegate.onLinkTap(attrs.get(NotusAttribute.link).value);
         }
-
-        if (scope.attrDelegate?.onCopy != null &&
-            attrs.contains(NotusAttribute.code)) {
-          print(attrs.get(NotusAttribute.code).value);
-          scope.attrDelegate.onCopy(attrs.get(NotusAttribute.code).value);
-        }
       };
       recognizer = tapGestureRecognizer;
     }
