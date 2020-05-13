@@ -132,15 +132,20 @@ class _ZefyrLineState extends State<ZefyrLine> {
 
     GestureRecognizer recognizer;
 
-    if (attrs.contains(NotusAttribute.link) ||
-        attrs.contains(NotusAttribute.code)) {
+    if (attrs.contains(NotusAttribute.link)) {
       final tapGestureRecognizer = TapGestureRecognizer();
       tapGestureRecognizer.onTap = () {
         if (scope.attrDelegate?.onLinkTap != null &&
             attrs.contains(NotusAttribute.link)) {
           scope.attrDelegate.onLinkTap(attrs.get(NotusAttribute.link).value);
         }
+      };
+      recognizer = tapGestureRecognizer;
+    }
 
+    if (attrs.contains(NotusAttribute.code)) {
+      final tapGestureRecognizer = TapGestureRecognizer();
+      tapGestureRecognizer.onTap = () {
         if (scope.attrDelegate?.onCopy != null &&
             attrs.contains(NotusAttribute.code)) {
           scope.attrDelegate.onCopy(attrs.get(NotusAttribute.code).value);
@@ -157,7 +162,8 @@ class _ZefyrLineState extends State<ZefyrLine> {
   }
 
   TextStyle _getTextStyle(NotusStyle style, ZefyrThemeData theme) {
-    TextStyle result = TextStyle();
+    var result =
+        TextStyle(fontFamily: theme.defaultLineTheme.textStyle.fontFamily);
     if (style.containsSame(NotusAttribute.bold)) {
       result = result.merge(theme.attributeTheme.bold);
     }
