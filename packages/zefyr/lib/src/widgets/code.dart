@@ -42,6 +42,17 @@ class ZefyrCode extends StatelessWidget {
         textDirection: TextDirection.ltr,
         child: Stack(
           children: [
+            Container(
+              decoration: BoxDecoration(
+                color: color,
+                borderRadius: BorderRadius.circular(3.0),
+              ),
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: items,
+              ),
+            ),
             Positioned(
               top: 10,
               right: 10,
@@ -53,17 +64,6 @@ class ZefyrCode extends StatelessWidget {
                 onPressed: () {
                   onCopy(text);
                 },
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: color,
-                borderRadius: BorderRadius.circular(3.0),
-              ),
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: items,
               ),
             ),
           ],
