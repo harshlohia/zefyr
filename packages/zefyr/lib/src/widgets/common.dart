@@ -144,6 +144,7 @@ class _ZefyrLineState extends State<ZefyrLine> {
 
         if (scope.attrDelegate?.onCopy != null &&
             attrs.contains(NotusAttribute.code)) {
+          print(attrs.get(NotusAttribute.code).value);
           scope.attrDelegate.onCopy(attrs.get(NotusAttribute.code).value);
         }
       };
