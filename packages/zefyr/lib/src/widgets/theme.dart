@@ -342,11 +342,12 @@ class AttributeTheme {
         monospaceFontFamily = 'Roboto Mono';
         break;
       default:
-        if (kIsWeb)
-          monospaceFontFamily = 'Roboto Mono';
-        else
-          throw UnimplementedError(
-              "Platform ${theme.platform} not implemented.");
+        if (kIsWeb) {
+          monospaceFontFamily = 'IRANSans';
+          break;
+        }
+
+        throw UnimplementedError("Platform ${theme.platform} not implemented.");
     }
 
     return AttributeTheme(
