@@ -92,7 +92,12 @@ class ZefyrToolbarScaffold extends StatelessWidget {
       children.add(toolbar.buildButton(context, ZefyrToolbarAction.close));
     }
     return Container(
-      constraints: constraints,
+//      constraints: constraints,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10.0),
+        ),
+      ),
       child: Material(color: theme.color, child: Row(children: children)),
     );
   }
@@ -245,12 +250,7 @@ class ZefyrToolbarState extends State<ZefyrToolbar>
     return _ZefyrToolbarScope(
       toolbar: this,
       child: Container(
-//        constraints: constraints,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(
-            Radius.circular(10.0),
-          ),
-        ),
+        constraints: constraints,
         child: Stack(children: layers),
       ),
     );
@@ -314,22 +314,21 @@ class _ZefyrButtonListState extends State<ZefyrButtonList> {
     final rightArrow = _showRightArrow
         ? Icon(Icons.arrow_right, size: 18.0, color: color)
         : null;
-    return  Row(
-        children: <Widget>[
-          SizedBox(
-            width: 12.0,
-            height: ZefyrToolbar.kToolbarHeight,
-            child: Container(child: leftArrow, color: theme.color),
-          ),
-          Expanded(child: ClipRect(child: list)),
-          SizedBox(
-            width: 12.0,
-            height: ZefyrToolbar.kToolbarHeight,
-            child: Container(child: rightArrow, color: theme.color),
-          ),
-        ],
-      );
-
+    return Row(
+      children: <Widget>[
+        SizedBox(
+          width: 12.0,
+          height: ZefyrToolbar.kToolbarHeight,
+          child: Container(child: leftArrow, color: theme.color),
+        ),
+        Expanded(child: ClipRect(child: list)),
+        SizedBox(
+          width: 12.0,
+          height: ZefyrToolbar.kToolbarHeight,
+          child: Container(child: rightArrow, color: theme.color),
+        ),
+      ],
+    );
   }
 
   void _handleScroll() {
