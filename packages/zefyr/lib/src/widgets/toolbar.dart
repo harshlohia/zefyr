@@ -95,7 +95,7 @@ class ZefyrToolbarScaffold extends StatelessWidget {
       constraints: constraints,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(
-          Radius.circular(10.0),
+          Radius.circular(20.0),
         ),
       ),
       child: Material(color: theme.color, child: Row(children: children)),
