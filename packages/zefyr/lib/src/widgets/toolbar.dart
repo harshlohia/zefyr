@@ -246,11 +246,7 @@ class ZefyrToolbarState extends State<ZefyrToolbar>
       toolbar: this,
       child: Container(
         constraints: constraints,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(
-            Radius.circular(10.0),
-          ),
-        ),
+
         child: Stack(children: layers),
       ),
     );
@@ -314,20 +310,27 @@ class _ZefyrButtonListState extends State<ZefyrButtonList> {
     final rightArrow = _showRightArrow
         ? Icon(Icons.arrow_right, size: 18.0, color: color)
         : null;
-    return Row(
-      children: <Widget>[
-        SizedBox(
-          width: 12.0,
-          height: ZefyrToolbar.kToolbarHeight,
-          child: Container(child: leftArrow, color: theme.color),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10.0),
         ),
-        Expanded(child: ClipRect(child: list)),
-        SizedBox(
-          width: 12.0,
-          height: ZefyrToolbar.kToolbarHeight,
-          child: Container(child: rightArrow, color: theme.color),
-        ),
-      ],
+      ),
+      child: Row(
+        children: <Widget>[
+          SizedBox(
+            width: 12.0,
+            height: ZefyrToolbar.kToolbarHeight,
+            child: Container(child: leftArrow, color: theme.color),
+          ),
+          Expanded(child: ClipRect(child: list)),
+          SizedBox(
+            width: 12.0,
+            height: ZefyrToolbar.kToolbarHeight,
+            child: Container(child: rightArrow, color: theme.color),
+          ),
+        ],
+      ),
     );
   }
 
