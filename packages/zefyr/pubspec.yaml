@@ -13,11 +13,12 @@ dependencies:
   collection: ^1.14.6
   url_launcher: ^5.0.0
   quill_delta: ^1.0.0
-  notus: ^0.1.0
+  notus: ^0.1.5
   meta: ^1.1.0
   quiver_hashcode: ^2.0.0
   clipboard_manager: ^0.0.4
-
+  material_design_icons_flutter: ^4.0.5345
+  outline_material_icons: ^0.1.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

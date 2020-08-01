@@ -4,8 +4,11 @@
 import 'dart:async';
 import 'dart:ui' as ui;
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:notus/notus.dart';
+import 'package:outline_material_icons/outline_material_icons.dart';
 
 import 'buttons.dart';
 import 'scope.dart';
@@ -347,7 +350,7 @@ class _DefaultZefyrToolbarDelegate implements ZefyrToolbarDelegate {
     ZefyrToolbarAction.code: Icons.code,
     ZefyrToolbarAction.quote: Icons.format_quote,
     ZefyrToolbarAction.horizontalRule: Icons.remove,
-    ZefyrToolbarAction.image: Icons.photo,
+    ZefyrToolbarAction.image: OMIcons.image,
     ZefyrToolbarAction.cameraImage: Icons.photo_camera,
     ZefyrToolbarAction.galleryImage: Icons.photo_library,
     ZefyrToolbarAction.hideKeyboard: Icons.keyboard_hide,
