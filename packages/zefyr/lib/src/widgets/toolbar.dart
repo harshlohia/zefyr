@@ -92,12 +92,7 @@ class ZefyrToolbarScaffold extends StatelessWidget {
       children.add(toolbar.buildButton(context, ZefyrToolbarAction.close));
     }
     return Container(
-//      constraints: constraints,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(
-          Radius.circular(10.0),
-        ),
-      ),
+      constraints: constraints,
       child: Material(color: theme.color, child: Row(children: children)),
     );
   }
