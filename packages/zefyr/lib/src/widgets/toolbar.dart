@@ -93,6 +93,11 @@ class ZefyrToolbarScaffold extends StatelessWidget {
     }
     return Container(
       constraints: constraints,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10.0),
+        ),
+      ),
       child: Material(color: theme.color, child: Row(children: children)),
     );
   }
@@ -263,7 +268,6 @@ class ZefyrToolbarState extends State<ZefyrToolbar>
       buildButton(context, ZefyrToolbarAction.quote),
       buildButton(context, ZefyrToolbarAction.code),
       buildButton(context, ZefyrToolbarAction.horizontalRule),
-      
     ];
     return buttons;
   }
