@@ -245,8 +245,12 @@ class ZefyrToolbarState extends State<ZefyrToolbar>
     return _ZefyrToolbarScope(
       toolbar: this,
       child: Container(
-        constraints: constraints,
-
+//        constraints: constraints,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(
+            Radius.circular(10.0),
+          ),
+        ),
         child: Stack(children: layers),
       ),
     );
@@ -310,13 +314,7 @@ class _ZefyrButtonListState extends State<ZefyrButtonList> {
     final rightArrow = _showRightArrow
         ? Icon(Icons.arrow_right, size: 18.0, color: color)
         : null;
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(
-          Radius.circular(10.0),
-        ),
-      ),
-      child: Row(
+    return  Row(
         children: <Widget>[
           SizedBox(
             width: 12.0,
@@ -330,8 +328,8 @@ class _ZefyrButtonListState extends State<ZefyrButtonList> {
             child: Container(child: rightArrow, color: theme.color),
           ),
         ],
-      ),
-    );
+      );
+
   }
 
   void _handleScroll() {
