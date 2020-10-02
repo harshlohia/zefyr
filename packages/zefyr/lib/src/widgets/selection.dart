@@ -142,12 +142,10 @@ class _ZefyrSelectionOverlayState extends State<ZefyrSelectionOverlay>
       _toolbarController?.dispose();
       _toolbarController = null;
     }
-    if (_toolbarController == null) {
-      _toolbarController = AnimationController(
-        duration: _kFadeDuration,
-        vsync: _overlay,
-      );
-    }
+    _toolbarController ??= AnimationController(
+      duration: _kFadeDuration,
+      vsync: _overlay,
+    );
 
     _toolbar?.markNeedsBuild();
   }
@@ -592,13 +590,13 @@ class _SelectionToolbarState extends State<_SelectionToolbar> {
     );
 
     final toolbar = controls.buildToolbar(
-        context,
-        editingRegion,
-        block.preferredLineHeight,
-        midpoint,
-        endpoints,
-        widget.selectionOverlay,
-        ClipboardStatusNotifier(),
+      context,
+      editingRegion,
+      block.preferredLineHeight,
+      midpoint,
+      endpoints,
+      widget.selectionOverlay,
+      ClipboardStatusNotifier(),
     );
     return CompositedTransformFollower(
       link: block.layerLink,

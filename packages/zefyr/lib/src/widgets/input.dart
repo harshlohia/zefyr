@@ -16,6 +16,8 @@ class InputConnectionController implements TextInputClient {
   //
   // public members
   //
+  @override
+  dynamic noSuchMethod(Invocation i) => super.noSuchMethod(i);
 
   final RemoteValueChanged onValueChanged;
 
