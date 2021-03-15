@@ -598,7 +598,6 @@ class _SelectionToolbarState extends State<_SelectionToolbar> {
       endpoints,
       widget.selectionOverlay,
       ClipboardStatusNotifier(),
-      Offset.infinite,
     );
     return CompositedTransformFollower(
       link: block.layerLink,
